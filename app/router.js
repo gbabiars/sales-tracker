@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 var Router = Ember.Router.extend({
-  location: SalesTrackerENV.locationType
+    location: SalesTrackerENV.locationType
 });
 
 Router.map(function() {
