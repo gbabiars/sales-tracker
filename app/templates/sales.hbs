@@ -12,10 +12,10 @@
     <tbody>
     {{#each sale in model}}
         <tr>
-            <td>{{sale.date}}</td>
+            <td>{{format-date sale.date}}</td>
             <td>{{sale.product.name}}</td>
-            <td>{{sale.volume}}</td>
-            <td>{{sale.price}}</td>
+            <td>{{format-number sale.volume}}</td>
+            <td>{{format-currency sale.price}}</td>
         </tr>
     {{/each}}
     </tbody>
