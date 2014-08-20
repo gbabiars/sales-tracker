@@ -3,7 +3,6 @@
 import Ember from 'ember';
 
 export default Ember.TextField.extend({
-    tagName: 'input',
     type: 'date',
 
     willInsertElement: function() {
