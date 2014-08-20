@@ -1,0 +1,26 @@
+<div>
+    <label for="volume">Volume</label>
+    {{input value=sale.volume type="number" id="volume"}}
+</div>
+<div>
+    <label for="price">Price</label>
+    {{input value=sale.price type="number" id="price"}}
+</div>
+<div>
+    <label for="date">Date</label>
+    {{date-input date=sale.date id="date"}}
+</div>
+<div>
+    <label for="product">Product</label>
+    {{view Em.Select value=sale.product
+    content=products
+    optionValuePath="content"
+    optionLabelPath="content.name"
+    prompt="Select a Product"
+    id="product"
+    }}
+</div>
+<div>
+    <button class="btn btn-primary">Save</button>
+    {{link-to "Cancel" "sales"}}
+</div>
