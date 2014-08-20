@@ -5,7 +5,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('sales');
+  this.resource('sales', function() {
+    this.route('edit', { path: ':sale_id/edit' });
+  });
   this.resource('products');
 });
 
