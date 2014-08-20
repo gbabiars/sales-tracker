@@ -18,7 +18,7 @@
     {{#each sale in model}}
         <tr>
             <td>{{format-date sale.date}}</td>
-            <td>{{sale.product.name}}</td>
+            <td>{{link-to sale.product.name "products.detail" sale.product}}</td>
             <td>{{format-number sale.volume}}</td>
             <td>{{format-currency sale.price}}</td>
             <td>{{link-to "Edit" "sales.edit" sale}}</td>

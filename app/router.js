@@ -9,7 +9,9 @@ Router.map(function() {
     this.route('edit', { path: ':sale_id/edit' });
     this.route('new');
   });
-  this.resource('products');
+  this.resource('products', function() {
+    this.route('detail', { path: ':product_id' });
+  });
 });
 
 export default Router;
