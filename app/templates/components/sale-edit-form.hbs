@@ -1,16 +1,16 @@
-<div>
+<div class="form-group">
     <label for="volume">Volume</label>
-    {{number-input number=sale.volume id="volume"}}
+    {{number-input number=sale.volume id="volume" class="form-control"}}
 </div>
-<div>
+<div class="form-group">
     <label for="price">Price</label>
-    {{number-input number=sale.price id="price"}}
+    {{number-input number=sale.price id="price" class="form-control"}}
 </div>
-<div>
+<div class="form-group">
     <label for="date">Date</label>
-    {{date-input date=sale.date id="date"}}
+    {{date-input date=sale.date id="date" class="form-control"}}
 </div>
-<div>
+<div class="form-group">
     <label for="product">Product</label>
     {{view Em.Select value=sale.product
     content=products
@@ -18,9 +18,9 @@
     optionLabelPath="content.name"
     prompt="Select a Product"
     id="product"
-    }}
+    class="form-control"}}
 </div>
-<div>
+<div class="form-group">
     <button class="btn btn-primary" {{bind-attr disabled=saveDisabled}}>Save</button>
     {{link-to "Cancel" "sales"}}
 </div>

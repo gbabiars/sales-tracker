@@ -4,6 +4,8 @@ export default Ember.Component.extend({
     tagName: 'form',
     role: 'form',
 
+    classNames: ['st-form'],
+
     saveDisabled: Ember.computed.not('sale.isDirty'),
 
     submit: function(e) {

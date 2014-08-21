@@ -1,11 +1,17 @@
 <h1>Products</h1>
 
-<ul>
-    {{#each product in model}}
-        <li>{{link-to product.name "products.detail" product}}</li>
-    {{/each}}
-</ul>
+<div class="row">
 
-<div>
-    {{outlet}}
+    <div class="col-md-3">
+        <div class="st-menu-vertical">
+            {{#each product in model}}
+                {{link-to product.name 'products.detail' product}}
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="col-md-9">
+        {{outlet}}
+    </div>
+
 </div>

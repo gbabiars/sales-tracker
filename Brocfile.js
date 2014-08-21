@@ -18,6 +18,16 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 
 app.import({
+    development: 'vendor/bootstrap/dist/css/bootstrap.css',
+    production: 'vendor/bootstrap/dist/css/bootstrap.min.css'
+});
+
+app.import({
+    development: 'vendor/bootstrap/dist/js/bootstrap.js',
+    production: 'vendor/bootstrap/dist/js/bootstrap.min.js'
+});
+
+app.import({
     development: 'vendor/moment/moment.js',
     production: 'vendor/moment/min/moment.min.js'
 });
